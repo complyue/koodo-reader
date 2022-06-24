@@ -69,9 +69,9 @@ class PopupMenu extends React.Component<PopupMenuProps, PopupMenuStates> {
         this.renderHighlighters();
       }, 1000);
 
-      doc.addEventListener("mousewheel", () => {
-        this.renderHighlighters();
-      });
+      // doc.addEventListener("mousewheel", () => {
+      //   this.renderHighlighters();
+      // });
     }
   };
   //新建高亮

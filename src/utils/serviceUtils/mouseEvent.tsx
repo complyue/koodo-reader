@@ -157,20 +157,20 @@ export const bindHtmlEvent = (
     arrowKeys(rendition, event.keyCode, event);
     await handleLocation(key, rendition);
   });
-  doc.addEventListener(
-    "mousewheel",
-    async (event) => {
-      if (readerMode === "scroll") {
-        await sleep(200);
-        rendition.record();
-      } else {
-        mouseChrome(rendition, event.wheelDelta);
-      }
+  // doc.addEventListener(
+  //   "mousewheel",
+  //   async (event) => {
+  //     if (readerMode === "scroll") {
+  //       await sleep(200);
+  //       rendition.record();
+  //     } else {
+  //       mouseChrome(rendition, event.wheelDelta);
+  //     }
 
-      await handleLocation(key, rendition);
-    },
-    false
-  );
+  //     await handleLocation(key, rendition);
+  //   },
+  //   false
+  // );
 
   window.addEventListener("keydown", async (event) => {
     arrowKeys(rendition, event.keyCode, event);
